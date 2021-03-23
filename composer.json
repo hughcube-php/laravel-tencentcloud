@@ -1,0 +1,45 @@
+{
+    "name": "hughcube/laravel-tencentcloud",
+    "description": "TencentCloud SDK for Laravel",
+    "keywords": [
+        "laravel",
+        "aliYun",
+        "TencentCloud"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hugh.li",
+            "email": "hugh.li@foxmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/container": "^5.1|^6.0|^7.0|^8.0",
+        "tencentcloud/tencentcloud-sdk-php": "^3.0"
+    },
+    "require-dev": {
+        "laravel/framework": "^8.5",
+        "laravel/lumen-framework": "^8.0",
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "autoload": {
+        "psr-4": {
+            "HughCube\\Laravel\\TencentCloud\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HughCube\\Laravel\\TencentCloud\\ServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit --verbose --coverage-clover=coverage.clover",
+        "phpstan": "phpstan analyse -vvv",
+        "check-style": "phpcs -p --standard=PSR2 src/ -v",
+        "fix-style": "phpcbf -p --standard=PSR2 src/ -v"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
